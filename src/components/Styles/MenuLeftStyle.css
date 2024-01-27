@@ -1,0 +1,46 @@
+.nav-link {
+  color: #f1f1f1;
+}
+
+.tab-pane {
+  padding: 20px;
+}
+
+.row {
+  flex-wrap: wrap;
+  width: 100%;
+  /* background-color: aqua; */
+  justify-content: space-between;
+}
+.order-sm-2{
+    /* margin-top: 10%; */
+    /* background-color: bisque; */
+    margin-right: 40%;
+}
+.icon{
+    font-size: 16vmin;
+    margin-right: 20px;
+}
+
+/* Adaptação para telas menores */
+/* quero que ele fica um do lado do outro */
+@media (max-width: 576px) {
+  .flex-column {
+    width: 30%;
+    padding-bottom: 100%;
+    margin-top: -19%;
+  }
+  .tab-pane {
+    margin-left: 30%;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* background-color: aqua; */
+  }
+  /* .order-sm-2{
+    background-color: bisque;
+  } */
+}

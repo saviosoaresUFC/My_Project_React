@@ -21,26 +21,28 @@
     font-size: 16vmin;
     margin-right: 20px;
 }
+.order-3{
+    /* background-color: blueviolet; */
+    width: 18%;
+}
 
 /* Adaptação para telas menores */
 /* quero que ele fica um do lado do outro */
 @media (max-width: 576px) {
   .flex-column {
     width: 30%;
-    padding-bottom: 100%;
-    margin-top: -19%;
+    padding-bottom: 94%;
+    /* margin-top: -19%; */
+    position: absolute;
   }
   .tab-pane {
-    margin-left: 30%;
+    margin-left: 40%;
   }
-  .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    /* background-color: aqua; */
+  .order-sm-2{
+    position: absolute;
   }
-  /* .order-sm-2{
-    background-color: bisque;
-  } */
+  .order-3{
+    background-color: blueviolet;
+    width: 20%;
+}
 }

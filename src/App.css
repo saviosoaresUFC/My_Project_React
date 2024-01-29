@@ -14,7 +14,7 @@
 /* margin: 0; */
 /* box-sizing: border-box; */
 /* } */
-*/
+*
 
 /* .Img {
   margin-top: 5%;
@@ -74,5 +74,18 @@
 /* ===========   HEADER   =========== */
 /* MeuMenu.css */
 .App {
-  background-color: #28a745;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  background-color: #99b9ff;
+  background-image: radial-gradient(
+      at 99% 18%,
+      hsla(205, 100%, 57%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 98% 88%, hsla(227, 100%, 57%, 1) 0px, transparent 50%),
+    radial-gradient(at 89% 14%, hsla(304, 100%, 57%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 48%, hsla(199, 100%, 57%, 1) 0px, transparent 50%),
+    radial-gradient(at 87% 50%, hsla(318, 0%, 100%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(288, 0%, 100%, 1) 0px, transparent 50%),
+    radial-gradient(at 8% 12%, hsla(290, 100%, 57%, 1) 0px, transparent 50%);
 }

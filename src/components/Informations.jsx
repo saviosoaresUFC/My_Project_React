@@ -2,12 +2,23 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Line, Doughnut } from 'react-chartjs-2';
 import Lottie from 'react-lottie';
+import {
+    FaBookOpen, FaMapSigns, FaPencilAlt,
+    FaCaretDown, FaCaretUp, FaTachometerAlt,
+    FaChartArea, FaLock, FaChartPie,
+    FaGlobe, FaBars, FaBell,
+    FaFillDrip, FaGithub
+} from "react-icons/fa";
+import {
+    FaRocket, FaWallet, FaRegHeart,
+    FaRegMessage, FaLocationDot, FaChartLine,
+    FaRegChartBar, FaBuilding, FaCalendar,
+    FaUsers, FaMoneyBill
+} from "react-icons/fa6";
+import { IoTicketSharp, IoPersonSharp, IoSearchSharp } from "react-icons/io5";
 import { PiCoffeeFill } from "react-icons/pi";
 import { TiMessages } from "react-icons/ti";
-import { FaBookOpen, FaMapSigns, FaPencilAlt, FaCaretDown, FaCaretUp } from "react-icons/fa";
-import { IoTicketSharp, IoPersonSharp } from "react-icons/io5";
 import { VscGraphLine } from "react-icons/vsc";
-import { FaRocket, FaWallet, FaRegHeart, FaRegMessage, FaLocationDot } from "react-icons/fa6";
 
 const Informations = () => {
     const defaultOptions = {
@@ -25,34 +36,42 @@ const Informations = () => {
                 {/* <!-- Sidebar --> */}
                 <nav id="sidebarMenu" className="collapse d-lg-block sidebar collapse bg-white">
                     <div className="position-sticky">
-                        <div className="list-group list-group-flush mx-3 mt-4">
+                        <ul className="list-group list-group-flush mx-3 mt-4">
                             {/* Adapte os links conforme necessário */}
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true">
-                                <i className="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
-                            </a>
-                            <a href="#" className="list-group-item list-group-item-action py-2 active" data-mdb-ripple-init>
-                                <i className="fas fa-chart-area fa-fw me-3"></i><span>Website traffic </span>
-                            </a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
-                                <i className="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
-                            </a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-globe fa-fw me-3"></i><span>International</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-building fa-fw me-3"></i><span>Partners</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-users fa-fw me-3"></i><span>Users</span></a>
-                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                                className="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a>
-                        </div>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true">
+                                <FaTachometerAlt size={20} className="me-3" /><span>Main dashboard</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2 active" data-mdb-ripple-init>
+                                <FaChartArea size={20} className="me-3" /><span>Charts</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaLock size={20} className="me-3" /><span>Password</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaChartLine size={20} className="me-3" /><span>Analytics</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaChartPie size={20} className="me-3" /><span>SEO</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaRegChartBar size={20} className="me-3" /><span>Marketing</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaGlobe size={20} className="me-3" /><span>International</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaBuilding size={20} className="me-3" /><span>Partners</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaCalendar size={20} className="me-3" /><span>Calendar</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaUsers size={20} className="me-3" /><span>Users</span>
+                            </li>
+                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                                <FaMoneyBill size={20} className="me-3" /><span>Sales</span>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
                 {/* <!-- Sidebar --> */}
@@ -64,7 +83,7 @@ const Informations = () => {
                         {/* <!-- Toggle button --> */}
                         <button className="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#sidebarMenu"
                             aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                            <i className="fas fa-bars"></i>
+                            <FaBars size={20} />
                         </button>
 
                         {/* <!-- Brand --> */}
@@ -75,7 +94,7 @@ const Informations = () => {
                         <form className="d-none d-md-flex input-group w-auto my-auto">
                             <input autocomplete="off" type="search" className="form-control rounded"
                                 placeholder='Search (ctrl + "/" to focus)' style={{ minWidth: 225 }} />
-                            <span className="input-group-text border-0"><i className="fas fa-search"></i></span>
+                            <span className="input-group-text border-0"><IoSearchSharp size={25} /></span>
                         </form>
 
                         {/* <!-- Right links --> */}
@@ -84,7 +103,7 @@ const Informations = () => {
                             <li className="nav-item dropdown">
                                 <a className="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
                                     role="button" data-mdb-dropdown-init aria-expanded="false">
-                                    <i className="fas fa-bell"></i>
+                                    <FaBell size={18} />
                                     <span className="badge rounded-pill badge-notification bg-danger">1</span>
                                 </a>
                                 <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
@@ -99,13 +118,14 @@ const Informations = () => {
                             {/* <!-- Icon --> */}
                             <li className="nav-item">
                                 <a className="nav-link me-3 me-lg-0" href="#">
+                                    <FaFillDrip size={18} />
                                     <i className="fas fa-fill-drip"></i>
                                 </a>
                             </li>
                             {/* <!-- Icon --> */}
                             <li className="nav-item me-3 me-lg-0">
                                 <a className="nav-link" href="#">
-                                    <i className="fab fa-github"></i>
+                                    <FaGithub size={18} />
                                 </a>
                             </li>
 
@@ -220,27 +240,27 @@ const Informations = () => {
                                                 <th scope="row">Percentage change</th>
                                                 <td>
                                                     <span className="text-danger">
-                                                        <FaCaretDown size={14} className="text-danger me-1"/><span>-48.8%</span>
+                                                        <FaCaretDown size={14} className="text-danger me-1" /><span>-48.8%</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-success">
-                                                        <FaCaretUp size={14} className="text-success me-1"/><span>14.0%</span>
+                                                        <FaCaretUp size={14} className="text-success me-1" /><span>14.0%</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-success">
-                                                        <FaCaretUp size={14} className="text-success me-1"/><span>46.4%</span>
+                                                        <FaCaretUp size={14} className="text-success me-1" /><span>46.4%</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-success">
-                                                        <FaCaretUp size={14} className="text-success me-1"/><span>29.6%</span>
+                                                        <FaCaretUp size={14} className="text-success me-1" /><span>29.6%</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-danger">
-                                                    <FaCaretDown size={14} className="text-danger me-1"/><span>-11.5%</span>
+                                                        <FaCaretDown size={14} className="text-danger me-1" /><span>-11.5%</span>
                                                     </span>
                                                 </td>
                                             </tr>
@@ -248,27 +268,27 @@ const Informations = () => {
                                                 <th scope="row">Absolute change</th>
                                                 <td>
                                                     <span className="text-danger">
-                                                    <FaCaretDown size={14} className="text-danger me-1"/><span>-17,654</span>
+                                                        <FaCaretDown size={14} className="text-danger me-1" /><span>-17,654</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-success">
-                                                    <FaCaretUp size={14} className="text-success me-1"/><span>28</span>
+                                                        <FaCaretUp size={14} className="text-success me-1" /><span>28</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-success">
-                                                    <FaCaretUp size={14} className="text-success me-1"/><span>111</span>
+                                                        <FaCaretUp size={14} className="text-success me-1" /><span>111</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-success">
-                                                        <FaCaretUp size={14} className="text-success me-1"/><span>$1,092.72</span>
+                                                        <FaCaretUp size={14} className="text-success me-1" /><span>$1,092.72</span>
                                                     </span>
                                                 </td>
                                                 <td>
                                                     <span className="text-danger">
-                                                    <FaCaretDown size={14} className="text-danger me-1"/><span>$-1.78</span>
+                                                        <FaCaretDown size={14} className="text-danger me-1" /><span>$-1.78</span>
                                                     </span>
                                                 </td>
                                             </tr>

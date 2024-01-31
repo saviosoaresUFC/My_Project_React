@@ -1,6 +1,5 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Line, Doughnut } from 'react-chartjs-2';
 import Lottie from 'react-lottie';
 import {
     FaBookOpen, FaMapSigns, FaPencilAlt,

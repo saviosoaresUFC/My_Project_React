@@ -1,78 +1,16 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
-body {
-  margin: 0;
-  /* background-color: #99b9ff;
-  background-image: radial-gradient(
-      at 99% 18%,
-      hsla(205, 100%, 57%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 98% 88%, hsla(227, 100%, 57%, 1) 0px, transparent 50%),
-    radial-gradient(at 89% 14%, hsla(304, 100%, 57%, 1) 0px, transparent 50%),
-    radial-gradient(at 35% 48%, hsla(199, 100%, 57%, 1) 0px, transparent 50%),
-    radial-gradient(at 87% 50%, hsla(318, 0%, 100%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(288, 0%, 100%, 1) 0px, transparent 50%),
-    radial-gradient(at 8% 12%, hsla(290, 100%, 57%, 1) 0px, transparent 50%);
-    background-size: contain;
-    background-repeat: no-repeat; */
+main{
+  background-color: #546AB8;
 }
-
-.nav {
-  background-color: #dbdbdb;
-  color: #000;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  padding: 0 2rem;
-}
-
-.icon {
-  /* background-color: aqua; */
-  /* font-size: 8px; */
-  width: 50vmin;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  margin-left: 1rem;
-}
-
-.logo {
-  height: 10%;
-  width: 50%;
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 0.5rem;
-  list-style: none;
-}
-
-.nav a {
-  color: inherit;
-  text-decoration: none;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-}
-
-.nav li.active {
-  background-color: #bdbdbd;
-}
-
-.nav li:hover {
-  background-color: #777;
-}
-
 .pages {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 4rem;
   font-size: 2rem;
 }
-.custom-toggler{
-  margin-right: 4vmin;
+@media (min-width: 991.98px) {
+  main {
+    padding-left: 240px;
+  }
 }

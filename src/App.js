@@ -1,18 +1,28 @@
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Auxilios from './pages/Auxilios';
+import Bolsas from './pages/Bolsas';
+import Editais from './pages/Editais';
+import Home from './pages/Home';
+import Intranet from './pages/Intranet';
+import Servicos from './pages/Servicos';
 import Informations from './components/Informations';
-import MenuLeft from './components/MenuLeft';
-import MenuTop from './components/MenuTop';
-import Tabela from './components/Tabela';
 
 
 function App() {
   return (
-    <div className='App'>
-      {/* <MenuTop /> */}
-      {/* <MenuLeft /> */}
-      {/* <Tabela /> */}
-      <Informations />
-    </div>
+    <>
+      <NavBar />
+      {/* <Informations /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auxilios" element={<Auxilios />} />
+        <Route path="/bolsas" element={<Bolsas />} />
+        <Route path="/editais" element={<Editais />} />
+        <Route path="/intranet" element={<Intranet />} />
+        <Route path="/servicos" element={<Servicos />} />
+      </Routes>
+    </>
   );
 }
 

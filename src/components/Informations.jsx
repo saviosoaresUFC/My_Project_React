@@ -18,6 +18,7 @@ import { IoTicketSharp, IoPersonSharp, IoSearchSharp } from "react-icons/io5";
 import { PiCoffeeFill } from "react-icons/pi";
 import { TiMessages } from "react-icons/ti";
 import { VscGraphLine } from "react-icons/vsc";
+import './Styles/InformationsStyle.css'
 
 const Informations = () => {
     const defaultOptions = {
@@ -35,42 +36,42 @@ const Informations = () => {
                 {/* <!-- Sidebar --> */}
                 <nav id="sidebarMenu" className="collapse d-lg-block sidebar collapse bg-white">
                     <div className="position-sticky">
-                        <ul className="list-group list-group-flush mx-3 mt-4">
+                        <div className="list-group list-group-flush mx-3 mt-4">
                             {/* Adapte os links conforme necessário */}
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true">
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init aria-current="true">
                                 <FaTachometerAlt size={20} className="me-3" /><span>Main dashboard</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2 active" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2 active" data-mdb-ripple-init>
                                 <FaChartArea size={20} className="me-3" /><span>Charts</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaLock size={20} className="me-3" /><span>Password</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaChartLine size={20} className="me-3" /><span>Analytics</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaChartPie size={20} className="me-3" /><span>SEO</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaRegChartBar size={20} className="me-3" /><span>Marketing</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaGlobe size={20} className="me-3" /><span>International</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaBuilding size={20} className="me-3" /><span>Partners</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaCalendar size={20} className="me-3" /><span>Calendar</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaUsers size={20} className="me-3" /><span>Users</span>
-                            </li>
-                            <li href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
+                            </a>
+                            <a href="#" className="list-group-item list-group-item-action py-2" data-mdb-ripple-init>
                                 <FaMoneyBill size={20} className="me-3" /><span>Sales</span>
-                            </li>
-                        </ul>
+                            </a>
+                        </div>
                     </div>
                 </nav>
                 {/* <!-- Sidebar --> */}

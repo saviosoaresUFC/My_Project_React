@@ -1,0 +1,59 @@
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.562);
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.name-group, .email-group, .cpf-group, .password-group, .confirm-password-group{
+    flex: 1 0 220px;
+}
+
+Button{
+    width: 36vmin;
+    /* margin-top: 20px; */
+}
+
+.groupAdesao{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-top: 10px; */
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+}
+.buttonsChooseDoc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: -10px;
+}
+.buttonCpf, .buttonPassaporte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 26px;
+    font-weight: bold;
+    color: rgba(135, 133, 133, 0.964);
+    background-color: #f0ebebe3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.buttonsChooseDoc .active{
+    border-style: dotted;
+}
+.text-termo{
+    color: rgba(0, 30, 255, 0.562);
+    text-align: center;
+    cursor: pointer;
+}

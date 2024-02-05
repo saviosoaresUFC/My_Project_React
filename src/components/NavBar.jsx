@@ -2,13 +2,12 @@ import React from 'react'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 import Logo from '../img/logo_montenegro.png'
 import AvatarSavio from '../img/avatarsavio.jpg'
-import { Nav, NavDropdown, Button } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import './Styles/NavBarStyle.css'
 import { FaNetworkWired } from "react-icons/fa";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import { IoBagSharp, IoDocumentText } from "react-icons/io5";
 import { GrServices } from "react-icons/gr";
-import { RxExit } from "react-icons/rx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Dropdown, Collapse, initMDB } from "mdb-ui-kit";
 
@@ -16,6 +15,10 @@ export default function NavBar() {
     initMDB({ Dropdown, Collapse });
     return (
         <>
+            <script
+                type="text/javascript"
+                src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+            ></script>
             {/* <!-- Font Awesome --> */}
             <link
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -31,50 +34,6 @@ export default function NavBar() {
                 href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
                 rel="stylesheet"
             />
-            {/* <!-- Sidebar --> */}
-            <Nav id="sidebarMenu" style={{marginTop: 62.6}} className="collapse d-lg-block sidebar bg-white">
-                <div className="position-sticky">
-                    <div className="list-group list-group-flush mx-3 mt-4">
-                        <Nav.Link className="nav-link">
-                            <CustomLink to="/auxilios">
-                                <FaHandshakeAngle size={20} className="me-3" />
-                                <strong>Auxilios</strong>
-                            </CustomLink>
-                        </Nav.Link>
-                        <Nav.Link className="nav-link">
-                            <CustomLink to="/bolsas">
-                                <IoBagSharp size={20} className="me-3" />
-                                <strong>Bolsas</strong>
-                            </CustomLink>
-                        </Nav.Link>
-                        <Nav.Link className="nav-link">
-                            <CustomLink to="/editais">
-                                <IoDocumentText size={20} className="me-3" />
-                                <strong>Editais</strong>
-                            </CustomLink>
-                        </Nav.Link>
-                        <Nav.Link className="nav-link">
-                            <CustomLink to="/intranet">
-                                <FaNetworkWired size={20} className="me-3" />
-                                <strong>Intranet</strong>
-                            </CustomLink>
-                        </Nav.Link>
-                        <Nav.Link className="nav-link">
-                            <CustomLink to="/servicos">
-                                <GrServices size={20} className="me-3" />
-                                <strong>Servicos</strong>
-                            </CustomLink>
-                        </Nav.Link>
-                        <Nav.Link className="nav-link">
-                            <CustomLink to="/">
-                                <RxExit size={20} className="me-3" />
-                                <strong>Sair</strong>
-                            </CustomLink>
-                        </Nav.Link>
-                    </div>
-                </div>
-            </Nav>
-            {/* <!-- Sidebar --> */}
             {/* <!-- Navbar --> */}
             <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
                 {/* <!-- Container wrapper --> */}
@@ -101,15 +60,46 @@ export default function NavBar() {
                             </Link>
                         </a>
                         {/* <!-- Left links --> */}
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav me-auto mb-lg-1">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Dashboard</a>
+                                <Nav.Link className="nav-link">
+                                    <CustomLink to="/auxilios">
+                                        <FaHandshakeAngle size={20} className="me-3" />
+                                        <strong>Auxilios</strong>
+                                    </CustomLink>
+                                </Nav.Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Team</a>
+                                <Nav.Link className="nav-link">
+                                    <CustomLink to="/bolsas">
+                                        <IoBagSharp size={20} className="me-3" />
+                                        <strong>Bolsas</strong>
+                                    </CustomLink>
+                                </Nav.Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Projects</a>
+                                <Nav.Link className="nav-link">
+                                    <CustomLink to="/editais">
+                                        <IoDocumentText size={20} className="me-3" />
+                                        <strong>Editais</strong>
+                                    </CustomLink>
+                                </Nav.Link>
+                            </li>
+                            <li class="nav-item">
+                                <Nav.Link className="nav-link">
+                                    <CustomLink to="/intranet">
+                                        <FaNetworkWired size={20} className="me-3" />
+                                        <strong>Intranet</strong>
+                                    </CustomLink>
+                                </Nav.Link>
+                            </li>
+                            <li class="nav-item">
+                                <Nav.Link className="nav-link">
+                                    <CustomLink to="/servicos">
+                                        <GrServices size={20} className="me-3" />
+                                        <strong>Servicos</strong>
+                                    </CustomLink>
+                                </Nav.Link>
                             </li>
                         </ul>
                         {/* <!-- Left links --> */}
@@ -190,10 +180,6 @@ export default function NavBar() {
                 {/* <!-- Container wrapper --> */}
             </nav>
             {/* <!-- Navbar --> */}
-            <script
-                type="text/javascript"
-                src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
-            ></script>
         </>
     )
 }
@@ -204,10 +190,21 @@ function CustomLink({ to, children, ...props }) {
     const isActive = useMatch({ path: resolvePath.pathname, end: true })
 
     return (
-        <Link style={{ textDecoration: 'none' }} className={`${isActive ? 'text-active' : ''}`} to={to} {...props}>
-            <div className={`list-group-item ${isActive ? 'active' : ''} border-0`}>
+        <Link style={{ textDecoration: 'none' }} className={`${isActive ? 'link-active' : ''}`} to={to} {...props}>
+            <div style={isActive && { backgroundColor: 'rgba(36, 61, 254, 0.168)', borderRadius: 20 }} className={`p-2 list-group-item`}>
                 {children}
             </div>
-        </Link>
+        </Link >
     )
+}
+
+function alert() {
+    return (
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Well done!</h4>
+            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+            <hr />
+            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        </div>
+    );
 }

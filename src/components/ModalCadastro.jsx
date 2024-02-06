@@ -140,6 +140,9 @@ export default function ModalCadastro(props) {
                             placeholder="*********"
                             controlId="GroupConfirmPassword"
                         />
+                        <Form.Control.Feedback type="invalid">
+                            Por favor, confirme sua senha.
+                        </Form.Control.Feedback>
                         <Form.Control.Feedback>Ótimo!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className='groupAdesao' controlId="formBasicCheckbox">
@@ -149,7 +152,7 @@ export default function ModalCadastro(props) {
                             feedback="Obrigatório aceitar os termos de adesão."
                             feedbackType="invalid"
                         />
-                        <div onClick={() => {setShowModalTermoAdesao(true)}} className='text-termo' >
+                        <div onClick={() => setShowModalTermoAdesao(true)} className='text-termo text-primary' >
                            Termo de adesao
                         </div>
                         <ModalTermodeAdesao

@@ -53,7 +53,5 @@ Button{
     border-style: dotted;
 }
 .text-termo{
-    color: rgba(0, 30, 255, 0.562);
-    text-align: center;
     cursor: pointer;
 }

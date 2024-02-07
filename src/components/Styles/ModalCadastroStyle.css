@@ -1,57 +1,97 @@
-.title{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.562);
-    text-align: center;
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.562);
+  text-align: center;
 }
 
-.form{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.name-group, .email-group, .cpf-group, .password-group, .confirm-password-group{
-    flex: 1 0 220px;
+.name-group,
+.email-group,
+.cpf-group,
+.password-group,
+.confirm-password-group {
+  flex: 1 0 220px;
 }
 
-Button{
-    width: 36vmin;
-    /* margin-top: 20px; */
+Button {
+  width: 36vmin;
 }
 
-.groupAdesao{
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    /* margin-top: 10px; */
-    width: 100%;
-    padding: 10px 0px 10px 10px;
+.groupAdesao {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* margin-top: 10px; */
+  width: 100%;
+  padding: 10px 0px 10px 10px;
 }
-.buttonsChooseDoc{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-    margin-top: -10px;
+.buttonsChooseDoc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: -10px;
 }
-.buttonCpf, .buttonPassaporte{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 26px;
-    font-weight: bold;
-    color: rgba(135, 133, 133, 0.964);
-    background-color: #f0ebebe3;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.buttonCpf,
+.buttonPassaporte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 26px;
+  font-weight: bold;
+  color: rgba(133, 134, 135, 0.964);
+  background-color: #f0ebebe3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.buttonsChooseDoc .active{
-    border-style: dotted;
+.buttonsChooseDoc .active {
+  border-style: dotted;
 }
-.text-termo{
-    cursor: pointer;
+.text-termo {
+  cursor: pointer;
+}
+.btn-cancelar {
+  background-color: #f0ebebe3;
+  color: rgba(135, 133, 133, 0.964);
+  border: none;
+}
+.btn-registrar {
+  background-color: #34c1fefa;
+  color: rgb(68, 67, 67);
+  border: none;
+}
+/* btns no hover */
+.btn-cancelar:hover {
+  background-color: hsla(240, 0%, 83%, 1);
+  background-image: radial-gradient(
+      at 9% 11%,
+      hsla(191, 0%, 91%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 75% 88%, hsla(194, 0%, 100%, 1) 0px, transparent 50%),
+    radial-gradient(at 5% 90%, hsla(206, 0%, 40%, 1) 0px, transparent 50%),
+    radial-gradient(at 94% 21%, hsla(0, 0%, 60%, 1) 0px, transparent 50%);
+  color: rgba(0, 0, 0, 0.964);
+  border: none;
+}
+.btn-registrar:hover {
+  background-color: hsla(198, 100%, 50%, 1);
+  background-image: radial-gradient(
+      at 2% 4%,
+      hsla(206, 90%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 97% 96%, hsla(214, 85%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 2% 96%, hsla(189, 100%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 99% 2%, hsla(189, 100%, 78%, 1) 0px, transparent 50%);
+  color: black;
+  border: none;
 }

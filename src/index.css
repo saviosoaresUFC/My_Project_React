@@ -12,10 +12,10 @@ main{
 .page-home{
   padding: 10px;
 }
-@media (min-width: 991.98px) {
-  
-}
 .body-termo-adesao{
   padding: 10px;
   text-align: justify;
 }
+/* .toast{
+  width: 80px;
+} */

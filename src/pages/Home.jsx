@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
 import ModalCadastro from '../components/ModalCadastro';
+import ToastExample from '../components/ToastExample';
 
 export default function Home() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
 
   return (
     <div className='page-home'>

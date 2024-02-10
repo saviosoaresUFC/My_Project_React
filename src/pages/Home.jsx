@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className='page-home'>
       <div class="progress" style={{ height: 20, borderRadius: 20 }}>
-        <div class="bg-success progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{ width: '75%' }}></div>
+        <div class="bg-info progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{ width: '75%' }}></div>
       </div>
       <div className='mt-4'>
         <Button variant="secondary" onClick={() => setModalShow(true)}>

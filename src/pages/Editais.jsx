@@ -1,17 +1,7 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  FaBookOpen, FaMapSigns, FaPencilAlt,
-} from "react-icons/fa";
-import {
-  FaRocket,
-  FaRegMessage, FaLocationDot
-} from "react-icons/fa6";
-import { IoTicketSharp, IoPersonSharp } from "react-icons/io5";
-import { PiCoffeeFill } from "react-icons/pi";
-import { TiMessages } from "react-icons/ti";
-import { VscGraphLine } from "react-icons/vsc";
 import './styles/EditaisStyle.css'
+import { Card, Col, Row, Button } from 'react-bootstrap';
 
 export default function Editais() {
   const editais = [
@@ -21,7 +11,6 @@ export default function Editais() {
       deadline: '09/03/2024',
       status: 'RESULTADO',
       color: 'bg-success',
-      icon: 'FaPencilAlt',
     },
     {
       id: 2,
@@ -29,7 +18,6 @@ export default function Editais() {
       deadline: '23/12/2024',
       status: 'EDITAL ABERTO',
       color: 'bg-info',
-      icon: 'FaRegMessage',
     },
     {
       id: 3,
@@ -37,7 +25,6 @@ export default function Editais() {
       deadline: '06/08/2024',
       status: 'EDITAL ENCERRADO',
       color: 'bg-danger',
-      icon: 'FaLocationDot',
     },
     {
       id: 4,
@@ -45,7 +32,6 @@ export default function Editais() {
       deadline: '04/05/2024',
       status: 'EDITAL ABERTO',
       color: 'bg-info',
-      icon: 'FaRocket',
     },
     {
       id: 5,
@@ -53,7 +39,6 @@ export default function Editais() {
       deadline: '09/07/2024',
       status: 'RESULTADO',
       color: 'bg-success',
-      icon: 'IoPersonSharp',
     },
     {
       id: 6,
@@ -61,7 +46,6 @@ export default function Editais() {
       deadline: '30/11/2024',
       status: 'RESULTADO',
       color: 'bg-success',
-      icon: 'VscGraphLine',
     },
     {
       id: 7,
@@ -69,7 +53,6 @@ export default function Editais() {
       deadline: '19/12/2024',
       status: 'EDITAL ABERTO',
       color: 'bg-info',
-      icon: 'IoTicketSharp',
     },
     {
       id: 8,
@@ -77,7 +60,6 @@ export default function Editais() {
       deadline: '20/10/2024',
       status: 'EDITAL ENCERRADO',
       color: 'bg-danger',
-      icon: 'FaBookOpen',
     },
     {
       id: 9,
@@ -85,7 +67,6 @@ export default function Editais() {
       deadline: '14/09/2024',
       status: 'RESULTADO',
       color: 'bg-success',
-      icon: 'TiMessages',
     },
     {
       id: 10,
@@ -93,7 +74,6 @@ export default function Editais() {
       deadline: '02/05/2024',
       status: 'EDITAL ABERTO',
       color: 'bg-info',
-      icon: 'PiCoffeeFill',
     },
     {
       id: 11,
@@ -101,11 +81,38 @@ export default function Editais() {
       deadline: '10/10/2024',
       status: 'EDITAL ENCERRADO',
       color: 'bg-danger',
-      icon: 'FaMapSigns',
     },
   ]
   return (
-    <main>
+    <>
+      <Row xs={1} md={6} className="g-6 p-4 mt-1">
+        {editais.map((edital) => {
+          return (
+            <Col key={edital.id} className="col-xl-3 col-sm-6 col-12 mb-4">
+              <Card>
+                <Card.Header className='d-flex justify-content-center'>Data limite: {edital.deadline}</Card.Header>
+                <Card.Body className='text-justify'>
+                  <Card.Title>{edital.title}</Card.Title>
+                  <Card.Text>
+                    <div className='d-flex align-items-end justify-content-center'>
+                      <h6 className={`rounded p-1 ${edital.color}`}>{edital.status}</h6>
+                    </div>
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className='d-flex justify-content-center'>
+                  <Button variant="info">Fazer download</Button>
+                </Card.Footer>
+              </Card>
+            </Col>
+          )
+        }
+        )}
+      </Row>
+    </>
+  )
+}
+
+{/* <main>
       <div className="container pt-4">
         <section>
           <div className="row">
@@ -115,19 +122,6 @@ export default function Editais() {
                   <div className="card">
                     <div className="card-body">
                       <div className="d-flex justify-content-between px-md-1">
-                        {/* <div className="align-self-center">
-                          {edital.icon === 'FaPencilAlt' && <FaPencilAlt size={40} className="text-info fa-3x" />}
-                          {edital.icon === 'FaRegMessage' && <FaRegMessage size={40} className="text-warning fa-3x" />}
-                          {edital.icon === 'FaLocationDot' && <FaLocationDot size={40} className="text-danger fa-3x" />}
-                          {edital.icon === 'FaRocket' && <FaRocket size={40} className="text-danger fa-3x" />}
-                          {edital.icon === 'IoPersonSharp' && <IoPersonSharp size={40} className="text-success fa-3x" />}
-                          {edital.icon === 'VscGraphLine' && <VscGraphLine size={40} className="text-warning fa-3x" />}
-                          {edital.icon === 'IoTicketSharp' && <IoTicketSharp size={40} className="text-info fa-3x" />}
-                          {edital.icon === 'FaBookOpen' && <FaBookOpen size={40} className="text-info fa-3x" />}
-                          {edital.icon === 'TiMessages' && <TiMessages size={40} className="text-warning fa-3x" />}
-                          {edital.icon === 'PiCoffeeFill' && <PiCoffeeFill size={40} className="text-success fa-3x" />}
-                          {edital.icon === 'FaMapSigns' && <FaMapSigns size={40} className="text-danger fa-3x" />}
-                        </div> */}
                         <div>
                           <p className="mb-3 mt-2">Data limite: {edital.deadline}</p>
                           <h5 className='title'>{edital.title}</h5>
@@ -146,7 +140,4 @@ export default function Editais() {
           </div>
         </section>
       </div>
-    </main>
-
-  )
-}
+    </main> */}

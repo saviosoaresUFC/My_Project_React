@@ -1,21 +1,38 @@
 * {
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
-main{
-  background-color: #546AB8;
+main {
+  background-color: #546ab8;
 }
 .pages {
   text-align: center;
   padding-top: 4rem;
   font-size: 2rem;
 }
-.page-home{
+.page-home {
   padding: 10px;
 }
-.body-termo-adesao{
+.body-termo-adesao {
   padding: 10px;
   text-align: justify;
 }
-/* .toast{
-  width: 80px;
-} */
+.carousel {
+  width: 70vmin;
+  padding-top: 10px;
+}
+.image-carousel {
+  height: 320px;
+}
+
+/* tela menor que 506 outras config */
+@media (max-width: 506px) {
+  .image-carousel {
+    height: 350px;
+  }
+}
+
+@media (max-width: 390px) {
+  .image-carousel {
+    height: 440px;
+  }
+}

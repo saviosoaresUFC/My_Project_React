@@ -60,13 +60,6 @@ export default function NavBar() {
                     <Nav>
                         <div className='usernameImg'>
                             <strong>Savio Carvalho</strong>
-                            {/* <img
-                                src={AvatarSavio}
-                                class="rounded-circle imageLogo"
-                                height="25"
-                                alt="Black and White Portrait of a Man"
-                                loading="lazy"
-                            /> */}
                             <NavDropdown title={<Image src={AvatarSavio} roundedCircle height="40" />} id="collapsible-nav-dropdown">
                                 <NavDropdown.Item href="#myprofile">My Profile</NavDropdown.Item>
                                 <NavDropdown.Item href="#setting">Setting</NavDropdown.Item>
